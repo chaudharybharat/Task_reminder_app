@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontawesometext="http://schemas.android.com/apk/res-auto"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout	
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/title" />
+		<!--<EditText android:id="@+id/title"-->
+		  <!--android:layout_width="fill_parent"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--/>-->
+        <EditText
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="rounded"
+
+                android:gravity="left"
+
+                />
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:text="@string/body" />
+		<!--<EditText android:id="@+id/body" android:layout_width="fill_parent"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:minLines="5"-->
+			<!--android:scrollbars="vertical" -->
+			<!--android:gravity="top" />-->
+        <EditText
+                android:id="@+id/body"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:lines="5"
+                android:hint="rounded"
+                android:gravity="top"
+                />
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:text="@string/date" />
+		<Button
+			android:id="@+id/reminder_date"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			/>
+		<Spinner
+			android:id="@+id/spinner"
+			android:layout_width="match_parent"
+			android:layout_height="40dp"
+			/>
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:text="@string/time" />
+		<Button
+			android:id="@+id/reminder_time"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			/>
+
+		<!--<Button android:id="@+id/confirm" -->
+		  <!--android:text="@string/confirm"-->
+			<!--android:layout_width="fill_parent"-->
+			<!--android:layout_height="wrap_content" />-->
+        <Button
+                android:id="@+id/confirm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/confirm"
+                android:textSize="16sp"
+
+                />
+	</LinearLayout>
+</ScrollView>

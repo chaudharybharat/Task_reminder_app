@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.task_reminder_app">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ReminderListActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ReminderEditActivity" android:label="@string/edit_reminder_title"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity android:name=".TaskPreferences" android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <receiver android:name=".OnBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".OnAlarmReceiver"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".ReminderService" />
+    </application>
+
+</manifest>
